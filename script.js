@@ -37,12 +37,13 @@ $(document).mousemove(function (event) {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("signupForm").addEventListener("submit", function (event) {
-    event.preventDefault();
-    alert("Thank you for signing up!");
+  document.getElementById("coin").addEventListener("click", (event) => {
+    for (let i = 0; i < 20; i++) {
+      createParticle(event.clientX, event.clientY);
+    }
   });
 
-  document.getElementById("coin").addEventListener("click", (event) => {
+  document.getElementById("followButton").addEventListener("click", (event) => {
     for (let i = 0; i < 20; i++) {
       createParticle(event.clientX, event.clientY);
     }
@@ -60,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     particle.style.left = `${x}px`;
     particle.style.top = `${y}px`;
     particle.style.background = `linear-gradient(45deg, ${color.startColor}, ${color.endColor})`;
-    particle.style.maskImage = `url('/star.svg')`;
+    particle.style.maskImage = `url('assets/star.svg')`;
     particle.style.maskSize = 'cover';
 
     const size = Math.random() * 20 + 10;
@@ -79,4 +80,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
