@@ -21,7 +21,7 @@ function updateCountdown() {
 }
 
 // Initial call to set the countdown immediately
-updateCountdown();
+// updateCountdown();
 
 // Update the countdown every 1 second
 let countdownFunction = setInterval(updateCountdown, 1000);
